@@ -9,3 +9,18 @@ For example: if str is "cab", "ca" can be reduced to "b" and you get "bb" (you c
 Input: "abcabc"
 Output: 2
 ```
+
+```
+Input: "cccc"
+Output: 4
+```
+
+```
+Input: "cccca"
+Output: 1
+```
+
+```
+Input: "abcac"
+Output: 1
+```
