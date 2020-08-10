@@ -4,3 +4,8 @@ Have the function StringReduction(str) take the str parameter being passed and r
 
 For example: if str is "cab", "ca" can be reduced to "b" and you get "bb" (you can also reduce it to "cc"). The reduction is done so the output should be 2. If str is "bcab", "bc" reduces to "a", so you have "aab", then "ab" reduces to "c", and the final string "ac" is reduced to "b" so the output should be 1.
 
+# Examples
+```
+Input: "abcabc"
+Output: 2
+```
