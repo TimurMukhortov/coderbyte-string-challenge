@@ -11,7 +11,7 @@ fun recurseSecond(inputString: String): Int {
             val currentPair = firstChar.toString() + secondChar.toString()
             val newString = inputString.replaceFirst(
                 currentPair,
-                checkNeedReplaceOrNot(firstChar, secondChar)
+                thirdChar(firstChar, secondChar)
             )
             val newLength = recurseSecond(newString)
             if (newLength == 1) {
@@ -24,12 +24,6 @@ fun recurseSecond(inputString: String): Int {
         }
     }
     return minimalLength
-}
-
-fun checkNeedReplaceOrNot(firstChar: Char, secondChar: Char): String = if (firstChar == secondChar) {
-    firstChar.toString() + secondChar.toString()
-} else {
-    thirdChar(firstChar, secondChar)
 }
 
 fun thirdChar(firstChar: Char, secondChar: Char): String {
