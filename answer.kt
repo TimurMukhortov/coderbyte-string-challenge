@@ -8,7 +8,7 @@ fun recurseSecond(inputString: String): Int {
         val firstChar = inputString[index]
         val secondChar = inputString[index + 1]
         if (firstChar != secondChar) {
-            val currentPair = firstChar.toString() + secondChar.toString()
+            val currentPair = firstChar.concat(secondChar)
             val newString = inputString.replaceFirst(
                 currentPair,
                 thirdChar(firstChar, secondChar)
@@ -27,19 +27,19 @@ fun recurseSecond(inputString: String): Int {
 }
 
 fun thirdChar(firstChar: Char, secondChar: Char): String {
-    val twoChar: String = firstChar.toString() + secondChar.toString()
-    if (!twoChar.contains("a")) {
+    if (firstChar != 'a' && secondChar != 'a') {
         return "a"
     }
-    if (!twoChar.contains("b")) {
+    if (firstChar != 'b' && secondChar != 'b') {
         return "b"
     }
-    if (!twoChar.contains("c")) {
+    if (firstChar != 'c' && secondChar != 'c') {
         return "c"
     }
-    return twoChar
+    return firstChar.concat(secondChar)
 }
 
+infix fun Char.concat(secondChar: Char): String = this.toString() + secondChar.toString()
 
 fun main() {
     println(StringChallenge(readLine()!!))
